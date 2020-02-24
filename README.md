@@ -1,2 +1,2 @@
-# algorithms-golang
-Data structure and algorithms in golang
+#### Algorithms in golang
+Data structure and algorithms
