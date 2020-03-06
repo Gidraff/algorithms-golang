@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/Gidraff/algorithms-golang/ds"
 
 	"github.com/Gidraff/algorithms-golang/numeric"
 )
@@ -31,4 +32,46 @@ func main() {
 
 	fmt.Println("GCD =>:")
 	fmt.Println(numeric.GCD(20, 15))
+
+	fmt.Println("Linked lists: ==>")
+	fmt.Println("Create a playlist")
+	playlist := ds.CreatePlaylist("Raff-Best")
+
+	fmt.Print("Adding songs to playlist...\n\n")
+	playlist.AddSong("Magode choke", "Zzero")
+	playlist.AddSong("Suzzana", "Sauti sol")
+	playlist.AddSong("whiley flow", "stormyz")
+	playlist.AddSong("Ill mind", "Hopsin")
+	playlist.AddSong("Hello", "Adele")
+
+	playlist.ShowAllSongs()
+	fmt.Println()
+
+	playlist.StartPlaying()
+	fmt.Printf("Now playing %s by %s\n", playlist.NowPlaying.Name, playlist.NowPlaying.Artist)
+
+	playlist.NextSong()
+	playlist.NextSong()
+	fmt.Println("Changing next song...")
+	fmt.Printf("Now playing %s by %s\n", playlist.NowPlaying.Name, playlist.NowPlaying.Artist)
+
+	playlist.PreviousSong()
+	fmt.Println("Changing tn previous song...")
+	fmt.Printf("Now playing: %s by %s\n", playlist.NowPlaying.Name, playlist.NowPlaying.Artist)
+
+	playlist.PreviousSong()
+	fmt.Println("Changing tn previous song...")
+	fmt.Printf("Now playing: %s by %s\n", playlist.NowPlaying.Name, playlist.NowPlaying.Artist)
+	fmt.Println("Linked list implementation")
+	link := &ds.List{}
+	link.Insert(1)
+	link.Insert(3)
+	link.Insert(3)
+	fmt.Printf("Head: %v\n", link.Head.Key)
+	fmt.Printf("Tail: %v\n", link.Tail.Key)
+	link.Display()
+	link.Reverse()
+
+	fmt.Println()
+
 }
