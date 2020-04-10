@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"github.com/Gidraff/algorithms-golang/ds"
-
 	"github.com/Gidraff/algorithms-golang/numeric"
+	"github.com/Gidraff/algorithms-golang/sorting"
 )
 
 func main() {
@@ -72,6 +72,8 @@ func main() {
 	link.Display()
 	link.Reverse()
 
-	fmt.Println()
+	fmt.Println("BubbleSort")
+	toBeSorted := []int{23, 13, 34, 37, 16, 8, 9}
+	sorting.BubbleSortInt(toBeSorted)
 
 }
